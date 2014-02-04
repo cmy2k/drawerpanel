@@ -2,6 +2,11 @@
 
 drawerPanel is a jQuery UI Widget that allows for content to be placed into panels that slide on and off the screen. 
 
+## Dependencies
+- jQuery
+- jQuery UI
+- Mustache
+
 ## Documentation
 
 ```javascript
