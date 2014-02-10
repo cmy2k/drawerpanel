@@ -8,7 +8,7 @@
     };
 
     var STATES = {
-        OPENED: 'open',
+        OPENED: 'opened',
         CLOSED: 'closed'
     };
 
@@ -31,7 +31,8 @@
             title: 'Title',
             openerImage: '',
             openerHeight: 110,
-            animationDuration: 400
+            animationDuration: 400,
+            onResizeStop: null
         },
 
         //
@@ -78,11 +79,6 @@
                 )
             );
 
-            // construction assumes the drawer is created open
-            // this is mostly useful when the contents are set after creation
-            this.state = STATES.OPENED;
-            $( '.drawer-opener', this.element ).hide();
-
             // set initial state, if differs from desired state
             if ( this.state !== state ) {
                 this.togglePanelState( true );
@@ -121,20 +117,21 @@
                 } else {
                     handle = 'e';
                 }
+                
+                var stopCallback = null;
+                if (this.options.onResizeStop !== null && typeof this.options.onResizeStop === 'function') {
+                    stopCallback = this.options.onResizeStop;
+                }
 
                 $( 'div.drawer', this.element ).resizable({
                     handles: handle,
                     maxWidth: this.options.maxWidth,
                     minWidth: this.options.minWidth,
+                    stop: stopCallback
                 });
             }
         },
 
-        // TODO: is it better to move these sorts of methods out of the widget
-        // they are stateless, so would there be a memory improvement if they were
-        // declared above in the statics as opposed to presumably repeated inside
-        // each instance of a widget? Does the cost really Matter?
-        // 
         // validators
         _validateInput: function( input, constants, defaultValue ) {
             input = input.toUpperCase();
@@ -207,7 +204,11 @@
         },
 
         setContents: function( contents ) {
-            this._deployDOM( this.template, contents, this.state );
+            $('div.drawer-contents', this.element).html( contents );
+        },
+        
+        getState: function() {
+            return this.state;
         }
 
     });

@@ -70,7 +70,4 @@ Changes the contents of the panel to the new contents provided (html is supporte
 
 ### 0.1
 - Document the code
-- Allow a callback to be registered with the conclusion of resizing
-- Return state (open/closed)
 - Add license?
-- Change STATES.OPENED = 'opened', not 'open'
