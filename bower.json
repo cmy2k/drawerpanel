@@ -1,0 +1,14 @@
+{
+  "name": "drawerpanel",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cmy2k/drawerpanel",
+  "main": "jquery.drawerpanel.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

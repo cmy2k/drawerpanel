@@ -1,9 +1,0 @@
-{
-	"name": "drawerpanel",
-	"version": "1.0.0",
-	"dependencies": {
-		"jquery": "latest",
-		"jquery-ui": "latest",
-		"mustache": "latest"
-	}
-}
