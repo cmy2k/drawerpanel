@@ -28,7 +28,7 @@ There are several options to customize the behavior of drawerPanel.
   - int (300)
 - **minWidth** minimum width constraint if **resizable** is true
   - int (200)
-- **maxWidth** maximum width constraint if **resiable** is true
+- **maxWidth** maximum width constraint if **resizable** is true
   - int (600)
 - **color** hex color for the background of the panel and the corresponding opener button
   - "#..." ("#eef")
@@ -42,6 +42,8 @@ There are several options to customize the behavior of drawerPanel.
   - int (110)
 - **animationDuration** milliseconds the animation should take when opening or closing the panel
   - int (400)
+- **onResizeStop** callback function that should execute when the user stops resizing a resizable panel
+  - function (null)
 
 ### Public methods
 ```javascript
@@ -64,10 +66,15 @@ Causes the panel to toggle its state (close if it is opened and vice versa). doI
 ```
 Changes the contents of the panel to the new contents provided (html is supported).
 
+```javascript
+.drawerPanel( 'getState' )
+```
+Returns the current state of the panel ('opened' or 'closed.').
+
 ---
 
 ## Todo
 
-### 0.1
-- Document the code
+### 0.2
 - Add license?
+- Document the code
