@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "homepage": "https://github.com/cmy2k/drawerpanel",
   "main": "jquery.drawerpanel.js",
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,6 +12,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.0",
-    "jquery-ui": "~1.10.3"
+    "jquery-ui": "~1.10.3",
+    "mustache": "~0.8.1"
   }
 }

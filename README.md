@@ -7,6 +7,12 @@ drawerPanel is a jQuery UI Widget that allows for content to be placed into pane
 - jQuery UI
 - Mustache
 
+This project is registered and ready to use with Bower. Usage:
+
+```javascript
+bower install drawerpanel
+```
+
 ## Documentation
 
 ```javascript
