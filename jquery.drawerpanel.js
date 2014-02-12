@@ -156,6 +156,11 @@
         //
         // Public methods
         //
+        
+        getState: function() {
+            return this.state;
+        },
+
         close: function( doImmediately ) {
             if ( this.state === STATES.OPENED ) {
                 if ( doImmediately ) {
@@ -207,8 +212,16 @@
             $('div.drawer-contents', this.element).html( contents );
         },
         
-        getState: function() {
-            return this.state;
+        clearContents: function() {
+            $('div.drawer-contents', this.element).empty();
+        },
+        
+        getContentsReference: function() {
+            return $('div.drawer-contents', this.element);
+        },
+        
+        appendContents: function( newContents ) {
+            this.getContentsReference().append(newContents);
         }
 
     });
