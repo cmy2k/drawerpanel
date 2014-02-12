@@ -1,6 +1,6 @@
 {
   "name": "drawerpanel",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://github.com/cmy2k/drawerpanel",
   "main": "jquery.drawerpanel.js",
   "ignore": [
