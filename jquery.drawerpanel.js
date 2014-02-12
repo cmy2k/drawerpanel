@@ -79,11 +79,6 @@
                 )
             );
 
-            // set initial state, if differs from desired state
-            if ( this.state !== state ) {
-                this.togglePanelState( true );
-            }
-
             var instance = this;
             // bind closer/opener
             $( 'div.drawer-closer', this.element )
@@ -104,7 +99,8 @@
 
             $( 'div.drawer-opener', this.element )
                 .css( "background-color", this.options.color )
-                .css( 'height', this.options.openerHeight );
+                .css( 'height', this.options.openerHeight )
+                .hide(); // initially hidden
             $( 'div.drawer', this.element )
                 .css( "background-color", this.options.color )
                 .width( this.options.width );
@@ -118,17 +114,20 @@
                     handle = 'e';
                 }
                 
-                var stopCallback = null;
-                if (this.options.onResizeStop !== null && typeof this.options.onResizeStop === 'function') {
-                    stopCallback = this.options.onResizeStop;
-                }
-
                 $( 'div.drawer', this.element ).resizable({
                     handles: handle,
                     maxWidth: this.options.maxWidth,
-                    minWidth: this.options.minWidth,
-                    stop: stopCallback
+                    minWidth: this.options.minWidth
                 });
+                
+                if (this.options.onResizeStop !== null && typeof this.options.onResizeStop === 'function') {
+                    $( 'div.drawer', this.element ).on( 'resizeStop', this.options.onResizeStop);
+                }
+            }
+            
+            // set initial state, if differs from desired state
+            if ( this.state !== state ) {
+                this.togglePanelState( true );
             }
         },
 

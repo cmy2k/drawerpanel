@@ -65,6 +65,8 @@
     opacity: 0.85;
     border-top: 0;
     border-bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .drawer-left {

@@ -95,4 +95,4 @@ Appends the new contents to the existing contents within the panel.
 ## Todo
 ### 1.0.6
 - Add license?
-- Document the code
+- Improve the resize handle sweet spot
