@@ -209,19 +209,19 @@
         },
 
         setContents: function( contents ) {
-            $('div.drawer-contents', this.element).html( contents );
+            $( 'div.drawer-contents', this.element ).html( contents );
         },
         
         clearContents: function() {
-            $('div.drawer-contents', this.element).empty();
+            $( 'div.drawer-contents', this.element ).empty();
         },
         
         getContentsReference: function() {
-            return $('div.drawer-contents', this.element);
+            return $( 'div.drawer-contents', this.element );
         },
         
         appendContents: function( newContents ) {
-            this.getContentsReference().append(newContents);
+            this.getContentsReference().append( newContents );
         }
 
     });
