@@ -93,6 +93,6 @@ Appends the new contents to the existing contents within the panel.
 ---
 
 ## Todo
-### 1.0.8
+### 1.0.9
 - Add license?
 - Improve the resize handle sweet spot
