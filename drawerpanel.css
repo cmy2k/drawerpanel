@@ -32,7 +32,7 @@
 }
 
 .drawer-opener-left > .drawer-opener-image {
-    background-image: url('icons/Open_Left.png');
+    background-image: url('img/Open_Left.png');
 }
 
 .drawer-opener-right {
@@ -42,7 +42,7 @@
 }
 
 .drawer-opener-right > .drawer-opener-image {
-    background-image: url('icons/Open_Right.png');
+    background-image: url('img/Open_Right.png');
 }
 
 .drawer-opener-image {
@@ -97,12 +97,12 @@
 
 .drawer-closer-left {
     right: 0;
-    background-image: url('icons/w-triangle24.png');
+    background-image: url('img/w-triangle24.png');
 }
 
 .drawer-closer-right {
     left: 0;
-    background-image: url('icons/e-triangle24.png');
+    background-image: url('img/e-triangle24.png');
 }
 
 /* Title */
