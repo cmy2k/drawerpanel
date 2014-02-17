@@ -17,7 +17,7 @@
 .drawer-opener {
     position: absolute;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
     width: 19px;
     height: 97px;
     border-top: 0;
@@ -46,7 +46,7 @@
 }
 
 .drawer-opener-image {
-    z-index: 1000;
+    z-index: 2000;
     width: 20px;
     height: 110px;
     background-repeat:no-repeat;
@@ -58,7 +58,7 @@
 .drawer {
     position: absolute;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
     height: 100%;
     padding-left: 5px;
     padding-right: 5px;
@@ -85,7 +85,7 @@
 .drawer-closer {
     position: absolute;
     top: 3px;
-    z-index: 1000;
+    z-index: 2000;
     width: 20px;
     height: 20px;
     background-repeat:no-repeat;
