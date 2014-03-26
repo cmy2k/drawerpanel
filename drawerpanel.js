@@ -121,7 +121,7 @@
                 });
                 
                 if (this.options.onResizeStop !== null && typeof this.options.onResizeStop === 'function') {
-                    $( 'div.drawer', this.element ).on( 'resizeStop', this.options.onResizeStop);
+                    $( 'div.drawer', this.element ).on( 'resizestop', this.options.onResizeStop);
                 }
             }
             
