@@ -101,9 +101,11 @@
                 .css( "background-color", this.options.color )
                 .css( 'height', this.options.openerHeight )
                 .hide(); // initially hidden
+            $( 'div.drawer-box', this.element )
+                .css( "background-color", this.options.color );
             $( 'div.drawer', this.element )
-                .css( "background-color", this.options.color )
                 .width( this.options.width );
+
 
             // resize handler
             if ( this.options.resizable === true ) {
@@ -163,15 +165,15 @@
         close: function( doImmediately ) {
             if ( this.state === STATES.OPENED ) {
                 if ( doImmediately ) {
-                    $( 'div.drawer', this.element ).css( this.placement.closed ).css({
+                    $( 'div.drawer-box', this.element ).css( this.placement.closed ).css({
                         display: 'none'
                     });
                     $( '.drawer-opener', this.element ).show();
                 } else {
                     var reference = this;
-                    $( 'div.drawer', this.element )
+                    $( 'div.drawer-box', this.element )
                         .animate( this.placement.closedTransition, this.options.animationDuration, function() {
-                            $( 'div.drawer', reference.element ).css({
+                            $( 'div.drawer-box', reference.element ).css({
                                 display: 'none'
                             });
                         $( '.drawer-opener', reference.element ).show();
@@ -185,12 +187,12 @@
         open: function( doImmediately ) {
             if ( this.state === STATES.CLOSED ) {
                 if ( doImmediately ) {
-                    $( 'div.drawer', this.element )
+                    $( 'div.drawer-box', this.element )
                         .css( this.placement.opened )
                         .css({ display: 'block' });
                 } else {
-                    $( 'div.drawer', this.element ).css({ display: 'block' });
-                    $( 'div.drawer', this.element )
+                    $( 'div.drawer-box', this.element ).css({ display: 'block' });
+                    $( 'div.drawer-box', this.element )
                         .animate( this.placement.openedTransition );
                 }
 

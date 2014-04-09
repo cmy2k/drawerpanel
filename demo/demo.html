@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>drawerPanel demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="../drawerpanel.css" />
+        <!-- 
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        -->
+    </head>
+    <body>
+        <div id="demo-left"></div>
+        <div id="demo-right"></div>        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script src="../drawerpanel.js"></script>
+        <script type="text/javascript">
+            $( '#demo-left' ).drawerPanel({
+                state: 'closed',
+                position: 'left',
+                color: '#efe',
+                title: 'Left panel',
+                resizable: true,
+                width: 300,
+                minWidth: 200,
+                maxWidth: 400,
+                onResizeStop: resizePanel,
+                templateLocation: '../panel.tpl.html'
+            });
+
+            
+            $( '#demo-right' ).drawerPanel({
+                color: '#fee',
+                title: 'Right panel',
+                resizable: true,
+                width: 600,
+                minWidth: 400,
+                maxWidth: 800,
+                onResizeStop: resizePanel,
+                templateLocation: '../panel.tpl.html'
+            });
+            
+            function resizePanel() {
+                console.log( 'panel resized' );
+            }
+        </script>
+    </body>
+</html>
