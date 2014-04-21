@@ -32,7 +32,9 @@
             openerImage: '',
             openerHeight: 110,
             animationDuration: 400,
-            onResizeStop: null
+            onResizeStop: null,
+            onOpen: null,
+            onClose: null
         },
 
         //
@@ -179,8 +181,10 @@
                         $( '.drawer-opener', reference.element ).show();
                     });
                 }
-
                 this.state = STATES.CLOSED;
+                if (this.options.onClose !== null) {
+                    this.options.onClose();
+                }
             }
         },
 
@@ -195,9 +199,11 @@
                     $( 'div.drawer-box', this.element )
                         .animate( this.placement.openedTransition );
                 }
-
                 $( '.drawer-opener', this.element ).hide();
                 this.state = STATES.OPENED;
+                if (this.options.onOpen !== null) {
+                    this.options.onOpen();
+                }
             }
         },
 
